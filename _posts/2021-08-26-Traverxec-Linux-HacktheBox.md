@@ -1,5 +1,5 @@
 ---
-title: "Post: Modified Date"
+title: "Traverxec - Linux HacktheBox Writeup"
 categories:
   - Writeup
 classes: 
