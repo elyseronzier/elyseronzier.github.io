@@ -2,6 +2,9 @@
 title: "Traverxec - Linux HacktheBox Writeup"
 categories:
   - Writeup
+tags:
+  - Linux
+  - HackTheBox
 classes: 
   - wide
 ---

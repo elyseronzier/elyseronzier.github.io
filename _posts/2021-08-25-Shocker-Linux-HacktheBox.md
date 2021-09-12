@@ -1,11 +1,10 @@
 ---
 title: "Shocker - Linux HacktheBox Writeup"
 categories:
-  - Blog
   - Writeup
 tags:
-  - link
-  - Post Formats
+  - Linux
+  - HackTheBox
 classes:
   - wide
 ---
