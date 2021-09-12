@@ -61,9 +61,6 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Hello there! Welcome to my website!"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
@@ -100,3 +97,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+atom_feed:
+  hide: true 
