@@ -45,5 +45,48 @@ Looking at their version might provide us with potential vulnerabilities.
 
 Next, we gather Dirbuster/Gobuster information as there is a website which may contain interesting directories. 
 Using Dirbuster, we get the following results: 
+```
+/.htpasswd 
+/.htpasswd.cgi 
+/.htpasswd.pl 
+/.htpasswd.txt 
+/.htpasswd.sh 
+/.htaccess 
+/.htaccess.txt 
+/.htaccess.sh 
+/.htaccess.cgi 
+/.htaccess.pl 
+/.hta 
+/.hta.txt 
+/.hta.sh 
+/.hta.cgi 
+/.hta.pl 
+/index.php 
+/javascript 
+/license.txt 
+/phpmyadmin 
+/plugins 
+/server-status 
+/wiki 
+/wp-admin 
+/wp-content
+/wp-includes
+```
+Of interest, we see the standard http directories such as *./htpasswd* and *./htaccess*.
+We also see */index.php* which brings us to the wordpress page, the website.
+There is a login page at */phpmyadmin*. 
+And */plugins* contains some .jar files which we can grab to have a look at later. 
+Finally, there is a */wiki page*, but it doesn't look to have anything of interest at the moment. However, it says that a new core plugin is being made which will store ''*playtime and other information*''. This could be related to the .jar files we have found. They could contain credentials.   
 
-  
+**FOOTHOLD**
+
+The first thing we can do with all the information we have gathered, is have a look at the .jar files to see if they contain anything useful. 
+To do this, we need to unzip the files we have and decode them. Because it's a .jar extension, we can use the JD-GUI tool to do this.
+This provides us with a nice UI and IDE to decode the .jar files we want to view.  
+We can now read the contents of the BlockyCore.jar file because thats the one of interest since the /wiki directory points us to it. 
+
+In it we find credentials!
+``` 
+sqluser = root
+sqlpass = ****************
+```
