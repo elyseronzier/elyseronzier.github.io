@@ -10,7 +10,7 @@ classes:
 ---
 
 Today's box is Blocky. A linux box rated easy on HacktheBox. 
-This box focused on enumeration of the directories that allow us to find the .jar files. These files contained the credentials needed to have SSH access. Finally, the privilege escalation was simply creating a root session via our user and the sudo su command. 
+This box focused on enumeration of the directories that allow us to find the .jar files. These files contained the credentials needed to have SSH access. Finally, the privilege escalation was simply creating a root session via our user and the *sudo su* command. 
 Here are my notes/my writeup for the box:
 
 **ENUMERATION**
@@ -83,10 +83,34 @@ Finally, there is a */wiki page*, but it doesn't look to have anything of intere
 The first thing we can do with all the information we have gathered, is have a look at the .jar files to see if they contain anything useful. 
 To do this, we need to unzip the files we have and decode them. Because it's a .jar extension, we can use the JD-GUI tool to do this.
 This provides us with a nice UI and IDE to decode the .jar files we want to view.  
-We can now read the contents of the BlockyCore.jar file because thats the one of interest since the /wiki directory points us to it. 
+We can now read the contents of the BlockyCore.jar file because that's the one of interest since the /wiki directory points us to it. 
 
 In it we find credentials!
 ``` 
 sqluser = root
 sqlpass = ****************
 ```
+So now let's try the different ports we can login to.
+We try FTP, it doesn't succeed.
+We use them on the login page but again, this doesn't work.
+Same thing with the SSH address.
+
+Then I realised that maybe the user-name wasn't root, but the user that was also root. So I decided to check the name of the web blog writer. I try Ryan as this is the name found in the .jar files. This doesn't work.
+Finally, I realise Ryan's alias is *Notch* on the website. So i use Notch and the password and successfully enter through the SSH port.   
+
+I can now easily grab the user.txt flag!
+
+**PRIVILEGE ESCALATION**
+
+First thing to do in in the shell, is to try the *sudo -l* command to check our current privileges. 
+We can use the same password and the result tells us that the user has the permission to run all commands on Blocky. 
+
+This means we can just go ahead and open our root session using the following command: 
+
+*sudo -i* 
+*sudo su* also works fine. 
+
+And a root session has been opened.
+We can now grab the *root.txt* flag in the root directory.
+
+And that's the box!   
