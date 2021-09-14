@@ -10,9 +10,9 @@ classes:
 ---
 
 Delving into the world of CyberSec, I was a little lost with the host of resources and recommendations online. 
-However, once I found this extremely useful [guide](https://blog.tryhackme.com/free_path/) I was able to slowly make my way into the the knowledge pool.
+However, once I found this extremely useful [guide](https://blog.tryhackme.com/free_path/) I was able to slowly make my way into the knowledge pool.
 
-The following list is taken from this same guide and shows the rooms I have completed and those I have yet to complete. This post will enable me to go back to rooms previously completed to brush up on a skill or tool. 
+The following list is taken from this same guide and shows the rooms I have completed and those I have yet to complete. This post will enable me to go back to rooms previously completed to brush up on a skill or tool. And to continue to pursue the goals for TryHackMe in order to better my skills. 
 
 # Level 1 - Intro
 - [x] [OpenVPN](https://tryhackme.com/room/openvpn)
