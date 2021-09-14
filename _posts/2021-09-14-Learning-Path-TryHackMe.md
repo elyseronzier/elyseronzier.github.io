@@ -107,6 +107,6 @@ The following list is taken from this same guide and shows the rooms I have comp
 # Level 9 - Windows
 - [ ] [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 - [ ] [Retro](https://tryhackme.com/room/retro)
-- [ ] [Blue Print]https://tryhackme.com/room/blueprint)
+- [ ] [Blue Print](https://tryhackme.com/room/blueprint)
 - [ ] [Anthem](https://tryhackme.com/room/anthem)
 - [ ] [Relevant](https://tryhackme.com/room/relevant)  
