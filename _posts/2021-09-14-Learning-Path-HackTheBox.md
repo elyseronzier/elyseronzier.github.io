@@ -18,7 +18,7 @@ I am working towards publishing every writeup.
 - [ ] Knife
 - [ ] Lame
 - [x] Legacy
-- [ ] Devel
+- [x] Devel
 - [ ] Beep
 - [ ] Optimum
 - [ ] Grandpa
