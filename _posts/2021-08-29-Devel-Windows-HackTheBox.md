@@ -17,7 +17,7 @@ Here are my notes/my writeup for the box:
 
 **ENUMERATION**
 
-Nmap shows up the following: 
+Nmap shows us the following: 
 ```
 PORT   STATE SERVICE VERSION
 
@@ -89,6 +89,7 @@ Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
 
 c:\windows\system32\inetsrv>   
 ```
+**PRIVILEGE ESCALATION**
 
 When doing this box, I wasn't different tools I could use to escalate privilege on Windows shells. 
 So after doing some research, I found out that we could use a module called *'multi/recon/local_exploit_suggester'*. 
@@ -121,6 +122,6 @@ So I choose the first suggestion as an exploit.
 Running it we become NT AUTHORITY/SYSTEM. 
 We have the highest privilege possible. So let's look for these flags!
 
-The first flag was found in the user Babis's Desktop directory. While the system flag was found in the Administrator's Desktop directory. 
+The first flag was found in the user Babis' Desktop directory. While the system flag was found in the Administrator's Desktop directory. 
 
 This box was great fun, and taught me a lot about using the different modules Metasploit has to offer. I'm starting to grasp the strength of using msfvenom a lot more now, having had to use it multiple times.  
