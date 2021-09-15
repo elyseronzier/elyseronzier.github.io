@@ -10,7 +10,7 @@ classes:
 ---
 
 Today's box is Devel. A Windows box rated easy on HacktheBox. 
-This box focused on taking advantage of the FTP anonymous login credentials. Once we have a shell, we can use a Windows kernel exploit to get the system and privesc.   
+This box focused on taking advantage of the FTP anonymous login credentials. Once we have a shell, we can use a exploit suggester on Metasploit to try and privesc and get the system.   
 
 
 Here are my notes/my writeup for the box:
