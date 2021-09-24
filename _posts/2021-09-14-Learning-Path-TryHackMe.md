@@ -4,6 +4,7 @@ categories:
   - Rooms
 tags:
   - TryHackme
+  - Resources
   - Goals
 classes:
   - wide

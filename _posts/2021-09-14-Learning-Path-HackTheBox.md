@@ -4,6 +4,7 @@ categories:
   - Boxes
 tags:
   - HackTheBox
+  - Resources
   - Goals
 classes:
   - wide
@@ -19,7 +20,7 @@ I am working towards publishing every writeup.
 - [ ] Lame
 - [x] Legacy
 - [x] Devel
-- [ ] Beep
+- [x] Beep
 - [ ] Optimum
 - [ ] Grandpa
 - [ ] Granny
@@ -30,4 +31,5 @@ I am working towards publishing every writeup.
 - [ ] Writeup
 - [x] Traverxec
 - [x] Shocker
+- [x] OpenAdmin
 
