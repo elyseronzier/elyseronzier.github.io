@@ -25,7 +25,7 @@ I am working towards publishing every writeup.
 - [ ] Grandpa
 - [ ] Granny
 - [ ] Blue
-- [ ] Jerry
+- [x] Jerry
 - [x] Blocky
 - [ ] Bashed
 - [ ] Writeup
