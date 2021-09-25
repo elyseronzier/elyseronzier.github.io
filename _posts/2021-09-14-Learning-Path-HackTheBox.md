@@ -11,10 +11,10 @@ classes:
 ---
 
 Here is, just like the TryHackMe post, a list of boxes I have **already completed**. 
-The boxes I have ticked here, represent the ones whos writeups I have already published. 
+The boxes I have ticked here, represent the ones who's writeups I have published. 
 I am working towards publishing every writeup.  
 
-<h4>Retired boxes completed with writeups published if ticked:</h4>  
+<h4>Retired boxes completed (with writeups published if ticked):</h4>  
 
 - [ ] Knife
 - [ ] Lame
