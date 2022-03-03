@@ -59,7 +59,7 @@ plugins:
 author:
   name   : "Elyse Ronzier"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Hello there! Welcome to my website! These are my personal notes on my path to learn about Cybersecurity. I use these to help me assimilate what I learn over time."
+  bio    : "Hello there! These are my personal notes on my path to learn about Cybersecurity. I use these to help me assimilate what I learn over time."
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
