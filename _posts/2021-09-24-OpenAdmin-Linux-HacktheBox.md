@@ -350,7 +350,7 @@ Will run 4 OpenMP threads
 Note: This format may emit false positives, so it will keep trying even after
 finding a possible candidate.
 Press 'q' or Ctrl-C to abort, almost any other key for status
-bloodninjas      (/home/kiwi/keyjo)
+bloodninjas      (/home/user/keyjo)
 Warning: Only 2 candidates left, minimum 4 needed for performance.
 1g 0:00:00:03 DONE (2021-09-24 16:49) 0.2695g/s 3865Kp/s 3865Kc/s 3865KC/sa6_123..*7¡Vamos!
 Session completed
