@@ -1,7 +1,7 @@
 ---
 title: "HackTheBox Learning Path and Goals"
 categories:
-  - Boxes
+  - Learning and Development
 tags:
   - HackTheBox
   - Resources

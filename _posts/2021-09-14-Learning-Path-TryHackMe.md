@@ -1,7 +1,7 @@
 ---
 title: "TryHackMe Learning Path and Goals"
 categories:
-  - Rooms
+  - Learning and Development
 tags:
   - TryHackme
   - Resources
