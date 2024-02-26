@@ -22,11 +22,11 @@ en: &DEFAULT_EN
 # meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
-  date_label                 : "Updated:"
+# date_label                 : "Updated:"
 # comments_label             :
 # comments_title             : 
-  more_label                 : "Learn more"
-  related_label              : "You may also enjoy"
+# more_label                 : "Learn more"
+# related_label              : "You may also enjoy"
   follow_label               : "Follow:"
 # feed_label                 : 
   powered_by                 : "Powered by"
