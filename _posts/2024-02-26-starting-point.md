@@ -42,3 +42,25 @@ Tier 2 -
 * Learn how to exploit LXD for privileged filesystem access.
 * Learn how to exploit insecure functions like "stcmp()" in PHP.
 
+**Let's have a look at these guided machines:**
+
+<figure class="half">
+    <a href="/assets/images/guided-questions.jpg"><img src="/assets/images/guided-questions.jpg"></a>
+    <a href="/assets/images/guided-questions-2.jpg"><img src="/assets/images/guided-questions-2.jpg"></a>
+    <figcaption>Screenshot from Hackthebox.</figcaption>
+</figure>
+
+Similar to Tryhackme, Hackthebox now offer guided questions to the very easy machines. The fields give you an idea of how the answer is formatted. With even an option for a hint.
+
+Eventually, the questions demand more interaction with the box itself. Guiding the student to find the answer using the available pwnbox or through a virtualmachine connection. 
+
+<figure class="half">
+    <a href="/assets/images/meow-root-flag.jpg"><img src="/assets/images/meow-root-flag.jpg"></a>
+    <a href="/assets/images/guided-questions-3.jpg"><img src="/assets/images/guided-questions-3.jpg"></a>
+    <figcaption>Screenshot from Hackthebox.</figcaption>
+</figure>
+
+Overall, Starting Point seems to be a very well made beginner course on learning how to hack. It has more than enough content to teach you many skills on different environment before you even get near the harder machines on HTB.
+Some time ago, I would have suggested a beginner to head to Tryhackme in order to learn the basics, and only come to HTB once they felt comfortable being a more independent learner. However, with this new and improved space, HTB can safely and easily accommodate for the most beginner of beginners.
+
+Fun times!
