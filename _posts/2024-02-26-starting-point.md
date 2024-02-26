@@ -1,6 +1,8 @@
 ---
 layout: single
 title:  "How to Hello World..?"
+classes: wide
+
 ---
 
 # How to Hello World..?
