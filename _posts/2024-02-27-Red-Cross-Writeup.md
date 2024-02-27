@@ -2,10 +2,10 @@
 layout: single
 title:  "Red Cross Writeup"
 classes: wide
-header:
-  overlay_image: /assets/images/RedCross.jpg
-  og_image: /assets/images/RedCross.jpg
-  caption: "Photo credit: [**Hackthebox**](https://app.hackthebox.com/machines/162)"
+#header:
+  #overlay_image: /assets/images/RedCross.jpg
+  #og_image: /assets/images/RedCross.jpg
+  #caption: "Photo credit: [**Hackthebox**](https://app.hackthebox.com/machines/162)"
 categories:
   - Writeup
 tags:
@@ -19,5 +19,5 @@ tags:
 
 ---
 
-lorem ipsum
+Lorem ipsum
 
