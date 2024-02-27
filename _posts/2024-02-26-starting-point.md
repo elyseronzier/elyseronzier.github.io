@@ -3,9 +3,9 @@ layout: single
 title:  "How to Hello World..?"
 classes: wide
 categories:
-  - blog
+  - Blog
 tags:
-  - htb
+  - HTB
 ---
 
 
