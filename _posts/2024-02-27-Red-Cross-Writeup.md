@@ -19,7 +19,7 @@ tags:
 
 ---
 
-*Disclaimer: A few of these writeups are ones that I've had locally stored for a while, or done a long time ago. So in the interest of time, these will be more sparse and less detailed.*
+*NB: A few of these writeups are ones that I've had locally stored for a while, or done a long time ago. So in the interest of time, these will be more sparse and less detailed.*
 *The more recent posts have better and more in depth analysis.*
 
 ---
@@ -53,7 +53,6 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-reverse-cookie.png"><img src="/assets/images/red-cross-reverse-cookie.png"></a>
     <a href="/assets/images/red-cross-reverse-cookie-injection.png"><img src="/assets/images/red-cross-reverse-cookie-injection.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
 </figure>
 
 {% capture fig_img %}
@@ -62,7 +61,6 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
 </figure>
 
 {% capture fig_img %}
@@ -71,7 +69,7 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
+  <figcaption>.</figcaption>
 </figure>
 
 * Let's keep this admin cookie session and manually change the domain to admin. Makes sense nomenclature wise. 
@@ -80,7 +78,7 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-admin-url.png"><img src="/assets/images/red-cross-admin-url.png"></a>
     <a href="/assets/images/red-cross-admin-panel.png"><img src="/assets/images/red-cross-admin-panel.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * After adding admin.redcross to our hosts files, we've successfully hit the admin panel.
@@ -88,7 +86,7 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-user-manage.png"><img src="/assets/images/red-cross-user-manage.png"></a>
     <a href="/assets/images/red-cross-network-access.png"><img src="/assets/images/red-cross-network-access.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * After exploring the panel's two options, let's play with user management.
@@ -97,7 +95,7 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-test-user-creds.png"><img src="/assets/images/red-cross-test-user-creds.png"></a>
     <a href="/assets/images/red-cross-test-user.png"><img src="/assets/images/red-cross-test-user.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * With our new user, can we use SSH? Spoiler alert: yes.
@@ -105,7 +103,7 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-test-ssh.png"><img src="/assets/images/red-cross-test-ssh.png"></a>
     <a href="/assets/images/red-cross-test-id.png"><img src="/assets/images/red-cross-test-id.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * Let's do some exploring
@@ -113,13 +111,13 @@ First steps: run Nmap against the target IP. Once there is confirmation of a web
 <figure class="half">
     <a href="/assets/images/red-cross-test-home.png"><img src="/assets/images/red-cross-test-home.png"></a>
     <a href="/assets/images/red-cross-test-pen.png"><img src="/assets/images/red-cross-test-pen.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 <figure class="half">
     <a href="/assets/images/red-cross-iptctl.png"><img src="/assets/images/red-cross-iptctl.png"></a>
     <a href="/assets/images/red-cross-iptctl-file.png"><img src="/assets/images/red-cross-iptctl-file.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 Okay, so up until now, I've discovered another user (Penelope) on the box. Although I can't do much with them as of right now. 
@@ -129,7 +127,7 @@ So I'm going to try to do some IP whitelisting since we have the network managem
 <figure class="half">
     <a href="/assets/images/red-cross-burp.png"><img src="/assets/images/red-cross-burp.png"></a>
     <a href="/assets/images/red-cross-burp-shell.png"><img src="/assets/images/red-cross-burp-shell.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 By intercepting a request within Burp, I am able to slot in a nice little reverse shell. 
@@ -143,19 +141,19 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/red-cross-db-creds.png"><img src="/assets/images/red-cross-db-creds.png"></a>
     <a href="/assets/images/red-cross-db-docs.png"><img src="/assets/images/red-cross-db-docs.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 <figure class="half">
     <a href="/assets/images/red-cross-pgconnect.png"><img src="/assets/images/red-cross-pgconnect.png"></a>
     <a href="/assets/images/red-cross-pgconnect-2.png"><img src="/assets/images/red-cross-pgconnect-2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 <figure class="half">
     <a href="/assets/images/red-cross-pgconnect-3.png"><img src="/assets/images/red-cross-pgconnect-3.png"></a>
     <a href="/assets/images/red-cross-db-connect.png"><img src="/assets/images/red-cross-db-connect.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * Successfully connected to the database! Let's list out users
@@ -166,7 +164,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
+  <figcaption>.</figcaption>
 </figure>
 
 * 'postgres' is the superuser whereas our current user is basically trash in comparison.
@@ -175,14 +173,14 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/red-cross-db-etcshad.png"><img src="/assets/images/red-cross-db-etcshad.png"></a>
     <a href="/assets/images/red-cross-db-etcpass.png"><img src="/assets/images/red-cross-db-etcpass.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 
 <figure class="half">
     <a href="/assets/images/red-cross-db-etcpass2.png"><img src="/assets/images/red-cross-db-etcpass2.png"></a>
     <a href="/assets/images/red-cross-db-etcpass3.png"><img src="/assets/images/red-cross-db-etcpass3.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * Hmm, after some tinkering, safe to assume there is no table called pg_passwd.
@@ -191,13 +189,13 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/red-cross-psql-repo.png"><img src="/assets/images/red-cross-psql-repo.png"></a>
     <a href="/assets/images/red-cross-psql-repo2.png"><img src="/assets/images/red-cross-psql-repo2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 <figure class="half">
     <a href="/assets/images/red-cross-db-enum.png"><img src="/assets/images/red-cross-db-enum.png"></a>
     <a href="/assets/images/red-cross-db-enum2.png"><img src="/assets/images/red-cross-db-enum2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * pg_passwd was actually passwd_table
@@ -207,7 +205,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/wolverine.png"><img src="/assets/images/wolverine.png"></a>
     <a href="/assets/images/wolverine2.png"><img src="/assets/images/wolverine2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * Alright then so we need a password. I guess it has to be encrypted in the same hash type. 
@@ -216,7 +214,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/cryptlib.png"><img src="/assets/images/cryptlib.png"></a>
     <a href="/assets/images/cryptlib2.png"><img src="/assets/images/cryptlib2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * So in this example the password is "a" I believe . Let's try that
@@ -233,7 +231,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
+  <figcaption>.</figcaption>
 </figure>
 
 * This checks out considering how old this db seems to be.
@@ -241,7 +239,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/insertuser.png"><img src="/assets/images/insertuser.png"></a>
     <a href="/assets/images/insertuser2.png"><img src="/assets/images/insertuser2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 *broke my connections a few times... whatever, it happens.*
@@ -252,7 +250,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
+  <figcaption>.</figcaption>
 </figure>
 
 * So I guess I can't add any root users. Although I'm not surprised, I am still disappointed.
@@ -266,7 +264,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Screenshot from the Red Cross Machine.</figcaption>
+  <figcaption>.</figcaption>
 </figure>
 
 * Let's try to SSH as our new user. Then it'll be explore time. 
@@ -274,7 +272,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/sshaccess.png"><img src="/assets/images/sshaccess.png"></a>
     <a href="/assets/images/sshaccess2.png"><img src="/assets/images/sshaccess2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 * User flag? SUCCESS
@@ -283,7 +281,7 @@ Let's upgrade to a better shell using a nifty python command. Once that's done, 
 <figure class="half">
     <a href="/assets/images/sudouser.png"><img src="/assets/images/sudouser.png"></a>
     <a href="/assets/images/sudouser2.png"><img src="/assets/images/sudouser2.png"></a>
-    <figcaption>Screenshots from the Red Cross Machine.</figcaption>
+    <figcaption>.</figcaption>
 </figure>
 
 And just like that, we have managed to grab the root flag from this machine.
