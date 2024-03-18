@@ -9,7 +9,7 @@ classes: wide
 categories:
   - Writeup
 tags:
-  - HTB
+  - HackTheBox
   - Linux
   - Medium
   - SQL Injection
