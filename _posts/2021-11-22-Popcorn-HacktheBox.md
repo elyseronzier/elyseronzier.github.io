@@ -6,6 +6,12 @@ categories:
 tags:
   - Medium
   - HackTheBox
+  - Vulnerability Assessment 
+  - Web Application
+  - Common Applications 
+  - Software & OS exploitation
+  - Arbitrary File Upload
+  - PHP
 classes:
   - wide
 ---
@@ -62,7 +68,7 @@ Okay, so there was a lot more to play with here. We seem to have a fully fledge 
 So I created a 'test' user which I used to log in with. Because we know that files can be supposedly uploaded, I went directly to the upload section. I didn't accept the files I tested...
 
 Do I actually have to upload a tor file? I mean, I guess that would actually make sense, considering the kali tor files I found.
-The easiest thing to do, is to do the exact same thing right? So I head over to (Kali)[https://www.kali.org/get-kali/#kali-virtual-machines] and get myself some of the spicy iso files. 
+The easiest thing to do, is to do the exact same thing right? So I head over to [Kali](https://www.kali.org/get-kali/#kali-virtual-machines) and get myself some of the spicy iso files. 
 
 
 <figure class="half">
