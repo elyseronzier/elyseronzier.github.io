@@ -55,7 +55,7 @@ After modifying some of the information in the files for the exploit and running
 Which get's TTY'd immediately.
 
 <figure class="half">
-    <a href="/assets/images/broker/pocxml.png"><img src="/assets/images/broker/pocxml.png"></a>
+    <a href="/assets/images/broker/poc-xml.png"><img src="/assets/images/broker/poc-xml.png"></a>
     <a href="/assets/images/broker/shell1.png"><img src="/assets/images/broker/shell1.png"></a>
 </figure>
 
